@@ -2,3 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    background-color: #FFF4E9;
+}
+
+.text-color-brown{
+    color: "#201408";
+}
+.bg-light-brown{
+    background-color: #E6CFBA;
+}
+.bg-dark-brown{
+    background-color: #201408;
+}
+.navlinks{
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    padding: 1.4rem 1.7rem 1.4rem ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.241);
+}
+
+/* Define a custom style for the placeholder text */
+.custom-input::placeholder {
+    color: #201408; 
+    opacity: 0.66;
+  }
+  
+
+.xxs{}
+
+@media (max-width:330px) {
+    .xxs{
+        width: 150px;
+    }
+}
