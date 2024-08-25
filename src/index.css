@@ -4,10 +4,11 @@
 
 :root{
     background-color: #FFF4E9;
+    scroll-behavior: smooth;
 }
 
 .text-color-brown{
-    color: "#201408";
+    color: #201408;
 }
 .bg-light-brown{
     background-color: #E6CFBA;
@@ -15,6 +16,24 @@
 .bg-dark-brown{
     background-color: #201408;
 }
+.btn-bg-brown{
+    background-image: url("./assets/Rectangle54.png");
+    background-position: center;
+    background-size: cover;
+}
+.btn-bg-orange{
+    background-image: url("./assets/Rectangle55.png");
+    background-position: center;
+    background-size: cover;
+}
+.orange__gradient {
+    background: linear-gradient(90deg, #d47923 0%, #FF7B00 100%);
+    filter: blur(110px);
+}
+.brown__gradient {
+    background: linear-gradient(90deg, #201408 0%, #201408 100%);
+    filter: blur(110px);
+  }
 .navlinks{
     color: white;
     font-size: 16px;

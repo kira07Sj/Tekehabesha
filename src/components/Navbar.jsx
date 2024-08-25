@@ -21,7 +21,8 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='fixed flex w-full py-4 px-2 justify-between items-center'>
+        <nav className={`fixed flex w-full py-4 px-2 justify-between
+         items-center ${openNav ? '' : 'backdrop-blur-sm'}`}>
             <h1 className='font-san sm:text-[16px] text-color-brown font-semibold'>
                 <span className='font-bold'>Teke </span>Habesha
             </h1>
@@ -53,7 +54,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='flex lg:hidden w-[35px] mx-1'>
+            <div className='lg:hidden w-[35px] mx-1 mr-8'>
                 <img onClick={toggle} src={menuIcon} alt="Menu" />
             </div>
 
@@ -66,7 +67,7 @@ const Navbar = () => {
                                 <img onClick={() => setOpenNav(false)} 
                                 src={backArrow} width={24} height={24} alt="Back" className='w-[45px] ml-4 mt-[2rem]' />
                             </div>
-                            <div className='flex flex-col w-full'>
+                            <div onClick={()=> setOpenNav(false)} className='flex flex-col w-full'>
                                 <a className="navlinks" href="#Home">Home</a>
                                 <a className="navlinks" href="#Product">Product</a>
                                 <a className="navlinks" href="#About">About</a>
