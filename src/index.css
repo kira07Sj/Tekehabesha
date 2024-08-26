@@ -5,6 +5,7 @@
 :root{
     background-color: #FFF4E9;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .text-color-brown{

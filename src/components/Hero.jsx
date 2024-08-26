@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section id='Home' className='flex flex-wrap w-[100%] justify-center overflow-hidden
     items-center'>
-        <div className=' absolute top-0 -right-4 -z-10'>
+        <div className=' absolute top-0 -right-0 -z-10'>
             <img src={tilet} alt="bg" 
             className=' h-[700px]' />
         </div>
@@ -53,8 +53,8 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className='sm:flex hidden justify-between flex-row w-full'>
-                <p className=' text-color-brown relative items-center
+            <div className='sm:flex hidden justify-between flex-wrap w-full'>
+                <p className=' text-color-brown relative items-center -z-10
                  pt-[5rem]'>
                     Beyond its aesthetic appeal, the Shamma holds 
                     deep cultural <br /> meaning. It is a symbol of Ethiopian 

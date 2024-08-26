@@ -54,7 +54,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='lg:hidden w-[35px] mx-1 mr-8'>
+            <div className='lg:hidden w-[35px]  mr-8'>
                 <img onClick={toggle} src={menuIcon} alt="Menu" />
             </div>
 
