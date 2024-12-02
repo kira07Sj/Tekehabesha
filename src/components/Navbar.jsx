@@ -7,6 +7,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Aos from "aos"
 import 'aos/dist/aos.css'
+import { navLinks } from '../constants';
+import SearchBar, {SearchBar2} from './SearchBar';
+
 
 const Navbar = () => {
 
@@ -21,31 +24,20 @@ const Navbar = () => {
     }
 
     return (
-        <nav className={`fixed flex w-full py-4 px-2 justify-between
+        <nav className={`fixed flex w-full py-4 px-6 justify-between 
          items-center ${openNav ? '' : 'backdrop-blur-sm'}`}>
-            <h1 className='font-san sm:text-[16px] text-color-brown font-semibold'>
+            <h1 className='font-san sm:text-[20px] text-color-brown font-semibold'>
                 <span className='font-bold'>Teke </span>Habesha
             </h1>
             <div className='hidden lg:flex lg:flex-row relative left-1/5 gap-16'>
-                <a className="text-color-brown font-normal" href="#Home">Home</a>
-                <a className="text-color-brown font-normal" href="#Product">Product</a>
-                <a className="text-color-brown font-normal" href="#About">About</a>
-                <a className="text-color-brown font-normal" href="#Service">Service</a>
+                {navLinks.map((items)=>(
+                    <a key={items.id} className="text-color-brown font-bold" href={items.url}>{items.title}</a>
+                ))}
             </div>
 
-            <div className='flex justify-center items-center gap-2'>
-                <div className='md:w-[350px] h-[35px] rounded-3xl bg-light-brown overflow-hidden
-                 flex items-center justify-between max-sm:w-[230px] xxs gap-5'>
-                    <input type="text" name="search" id="search" className="w-[102%] h-[102%] bg-transparent 
-                    max-sm:placeholder:text-[12px] text-black outline-none 
-                    px-6 custom-input" placeholder="Search for 100+ products..." />
-                    <div className='relative right-1 w-[35px] h-[20px]'>
-                        <button type='submit'>
-                            <img src={searchIcon} width={24} height={24} alt="" className="object-cover w-full h-full" />
-                        </button>
-                    </div>
-                </div>
-
+            <div className='flex justify-center items-center gap-2 max-sm:hidden'>
+                
+                <SearchBar/>
                 <div className='w-[120px] h-[35px] bg-light-brown lg:flex hidden rounded-3xl justify-center items-center'>
                     <div>
                         <img src={globe} alt="globe" />
@@ -54,8 +46,13 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='lg:hidden w-[35px]  mr-8'>
-                <img onClick={toggle} src={menuIcon} alt="Menu" />
+            <SearchBar2 className={`fixed ml-[5rem]`}/>
+
+            <div className='flex items-center justify-center gap-4 lg:hidden'>
+                <img src={searchIcon} width={24} height={24} alt="" className=" w-[32px] h-[32px]" />
+                <div className='lg:hidden w-[35px]'>
+                    <img onClick={toggle} src={menuIcon} alt="Menu" />
+                </div>
             </div>
 
             {openNav && (
@@ -68,10 +65,9 @@ const Navbar = () => {
                                 src={backArrow} width={24} height={24} alt="Back" className='w-[45px] ml-4 mt-[2rem]' />
                             </div>
                             <div onClick={()=> setOpenNav(false)} className='flex flex-col w-full'>
-                                <a className="navlinks" href="#Home">Home</a>
-                                <a className="navlinks" href="#Product">Product</a>
-                                <a className="navlinks" href="#About">About</a>
-                                <a className="navlinks" href="#Service">Service</a>
+                                {navLinks.map((items)=>(
+                                     <a key={items.id} className="navlinks" href={items.url}>{items.title}</a>
+                                ))}
                             </div>
                             <div className='w-[120px] h-[35px] bg-light-brown lg:hidden flex rounded-3xl justify-center items-center absolute bottom-2 right-11'>
                                 <div>
