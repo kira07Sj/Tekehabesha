@@ -20,15 +20,15 @@ const SearchBar = ({className}) => {
 
 export default SearchBar
 
-export const SearchBar2 = ({className}) => {
+export const SearchBar2 = ({className, onClickX}) => {
     return (
-              <div className={`${className || ''} md:w-[350px] h-[35px] rounded-3xl bg-light-brown overflow-hidden
-                  flex items-center justify-between max-sm:w-[230px] xxs gap-5`}>
+              <div className={`${className || ''} w-[90%] h-[40px] rounded-3xl bg-light-brown overflow-hidden
+                  flex items-center justify-between   gap-5`}>
                       <input type="text" name="search" id="search" className="w-[102%] h-[102%] bg-transparent 
                       max-sm:placeholder:text-[12px] text-black outline-none 
                       px-6 custom-input" placeholder="Search for 100+ products..." />
                       
-                      <i class='bx bx-x text-[2rem] absolute '></i>
+                      <i onClick={onClickX} class='bx bx-x text-[2rem] absolute right-1'></i>
            </div>
     )
   }

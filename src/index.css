@@ -50,10 +50,3 @@
   }
   
 
-.xxs{}
-
-@media (max-width:330px) {
-    .xxs{
-        width: 150px;
-    }
-}
