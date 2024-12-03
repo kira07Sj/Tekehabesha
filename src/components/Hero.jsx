@@ -8,8 +8,8 @@ import locationIcon from '../assets/location.png'
 const Hero = () => {
 
   return (
-    <section id='Home' className='flex flex-col w-[100%] justify-center overflow-hidden
-    items-center'>
+    <section id='Home' className='flex flex-col w-[100%] justify-center 
+    items-center pb-[3rem]'>
         <div className=' absolute top-0 -right-0 max-md:right-3 -z-10'>
             <img src={tilet} alt="bg" 
             className=' h-[700px]' />
@@ -53,7 +53,7 @@ const Hero = () => {
 
         </div>
         <div className='flex flex-row max-sm:hidden items-center 
-        justify-between w-[80%] mb-[2rem]'>
+        justify-between w-[80%] mb-[2rem] '>
                 <p className='w-[35%]'>
                 Beyond its aesthetic appeal, the Shamma holds deep cultural meaning. 
                 It is a symbol of Ethiopian identity and pride,
