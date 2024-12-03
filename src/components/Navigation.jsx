@@ -71,7 +71,7 @@ const Navbar = () => {
                                      <a key={items.id} className="navlinks" href={items.url}>{items.title}</a>
                                 ))}
                             </div>
-                            <div className='w-[120px] h-[35px] bg-light-brown lg:hidden flex rounded-3xl justify-center items-center absolute bottom-2 right-11'>
+                            <div className='w-[120px] h-[35px] bg-light-brown lg:hidden flex rounded-3xl justify-center items-center absolute bottom-4 right-11'>
                                 <div>
                                     <img src={globe} alt="globe" />
                                 </div>
