@@ -1,6 +1,7 @@
 import Navigation from "./components/Navigation.jsx"
 import Hero from "./components/Hero"
 import About from "./components/About.jsx"
+import Products from "./components/Products.jsx"
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <Navigation/>
     <Hero/>
     <About/>
+    <Products/>
 
     </div>
   )

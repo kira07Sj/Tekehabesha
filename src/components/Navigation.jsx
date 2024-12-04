@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed flex w-full py-4 px-6 justify-between 
-         items-center ${openNav ? '' : 'backdrop-blur-sm'}`}>
+         items-center ${openNav ? ' scroll-0' : 'backdrop-blur-sm'}`}>
             <h1 className='font-san sm:text-[20px] text-color-brown font-semibold'>
                 <span className='font-bold'>Teke </span>Habesha
             </h1>
@@ -59,7 +59,7 @@ const Navbar = () => {
 
             {openNav && (
                 <div className='fixed w-full h-full top-0 left-0
-                 backdrop-blur-sm' data-aos="fade-left">
+                 backdrop-blur-sm z-50' data-aos="fade-left">
                     <div className='w-[48%] h-full absolute top-0 right-0 bg-dark-brown flex flex-col gap-3'>
                         <div className='flex flex-col justify-center items-start'>
                             <div className='opacity-75'>

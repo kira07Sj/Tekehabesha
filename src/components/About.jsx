@@ -20,7 +20,7 @@ const About = () => {
                       Shamma, vibrant Tibeb, and intricately embroidered Habesha
                        Kemis. Each piece is handcrafted by skilled artisans using 
                        traditional techniques passed down</p>
-                <div className='flex flex-row justify-end items-center w-full mt-[1rem]'>
+                <div className='flex flex-row justify-end items-center w-full mt-[1rem] -z-10'>
                     <div className='flex items-center justify-center '>
                     <Button title={"Read More"} className={`text-color-brown w-[184px] max-sm:scale-75 h-[35px]
                     btn-bg-orange  rounded-3xl mr-3 max-sm:-mr-8`}/>
@@ -34,7 +34,7 @@ const About = () => {
 
                 <div className='flex lg:flex-row flex-col  items-center justify-center w-full py-[2rem] gap-6'>
                         <div className='flex items-center justify-between rounded-lg h-[130px] w-full bg-dark-brown2 shadow-md'>
-                            <div className='w-[120px] max-sm:w-[100px] h-[110px] max-sm:h-[90px] rounded-lg m-2 bg-white flex items-center justify-center'>
+                            <div className='w-[120px] max-sm:w-[100px] h-[110px] max-sm:h-[90px] rounded-lg m-2  flex items-center justify-center'>
                                 <img src={Gabi} className='object-contain' />
                             </div>
 
