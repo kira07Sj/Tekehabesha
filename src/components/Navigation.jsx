@@ -28,6 +28,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed flex w-full py-4 px-6 justify-between z-50
          items-center ${openNav ? ' scroll-0' : 'backdrop-blur-sm'}`}>
+            <div className='w-full h-full bg_Primary fixed top-0 left-0 opacity-50 -z-10'/>
             <h1 className='font-san sm:text-[20px] text-color-brown font-semibold'>
                 <span className='font-bold'>Teke </span>Habesha
             </h1>
@@ -71,7 +72,7 @@ const Navbar = () => {
                                      <a key={items.id} className="navlinks" href={items.url}>{items.title}</a>
                                 ))}
                             </div>
-                            <div className='w-[120px] h-[35px] bg-light-brown lg:hidden flex rounded-3xl justify-center items-center absolute bottom-4 right-11'>
+                            <div className='w-[120px] h-[35px] bg-light-brown lg:hidden flex rounded-3xl justify-center items-center absolute bottom-4 right-7'>
                                 <div>
                                     <img src={globe} alt="globe" />
                                 </div>
