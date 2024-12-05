@@ -4,9 +4,9 @@ import Gabi from '../assets/image.png'
 
 const About = () => {
   return (
-    <div className='flex flex-col items-center justify-center w-[60%] max-sm:w-[80%] py-[2rem]'>
+    <div id='About' className='flex flex-col items-center justify-center w-[60%] max-sm:w-[80%] py-[2rem]'>
         <div className='w-full flex flex-col items-center justify-center'>
-            <h1 className='font-bold text-color-brown'>About</h1>
+            <h1 className='font-bold text-color-brown text-[2rem]'>About</h1>
             <p className='text-justify text-color-brown max-sm:text-[14px]'>
                 Welcome to Teka Habesha, your premier destination for authentic
                  traditional Ethiopian clothing. Our shop is dedicated to 

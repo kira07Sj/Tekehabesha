@@ -8,6 +8,7 @@
     overflow-x: hidden;
 }
 
+
 .text-color-brown{
     color: #201408;
 }
@@ -52,4 +53,7 @@
     opacity: 0.66;
   }
   
-
+.card_border{
+    border: 1px solid #201408;
+    transition: 0.5s;
+}

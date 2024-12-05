@@ -26,7 +26,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className={`fixed flex w-full py-4 px-6 justify-between 
+        <nav className={`fixed flex w-full py-4 px-6 justify-between z-50
          items-center ${openNav ? ' scroll-0' : 'backdrop-blur-sm'}`}>
             <h1 className='font-san sm:text-[20px] text-color-brown font-semibold'>
                 <span className='font-bold'>Teke </span>Habesha
