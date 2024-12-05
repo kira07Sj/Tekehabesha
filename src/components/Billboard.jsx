@@ -2,6 +2,7 @@ import React from 'react'
 import BillBoardImg from '../assets/discountBg.png'
 import Kemis from '../assets/main-habesha.png'
 import Button from './Button'
+import BillBoradImgRight from '../assets/img1.png'
 
 const Billboard = () => {
   return (
@@ -38,7 +39,17 @@ const Billboard = () => {
         </div>
 
         <div className=' items-center justify-center hidden xl:flex'>
-                <div className='bg_Primary w-[260px] h-[310px] absolute left-[50%] -rotate-[20deg] ml-[4rem]'></div>
+                <div className='bg_Primary w-[255px] h-[380px] absolute left-[50%] -rotate-[30deg] ml-[4rem]'/>
+                <div className='w-[260px] h-[220px] absolute left-[70%] -mt-2'>
+                    <img src={BillBoradImgRight} alt="" className='object-cover z-30' />
+                </div>
+                <p className='text-white text-[16px] absolute z-20 w-[13%] h-[210px] right-5 mt-[3rem]'>Don't miss out on these incredible saving.
+                     Shop now and embrace the elegance of Ethiopian 
+                     fashion for less!
+                </p>
+                <a href='#' className=' absolute right-0 mt-[6rem]'>
+                    <Button title={"More service"} className={`text-dark-brown w-[144px]  h-[35px] bg_Primary  rounded-[40px] rounded-r-none`}/>
+                </a>
         </div>
     </div>
   )

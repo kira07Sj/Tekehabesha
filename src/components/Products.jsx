@@ -6,7 +6,7 @@ import Button from './Button'
 const Products = () => {
   return (
     <section id='Product' className='flex flex-col items-center justify-center 
-    w-[70%] max-md:w-[80%] max-sm:w-[80%] py-[1rem]'>
+    w-[70%] max-md:w-[80%] max-sm:w-[80%] py-[1rem] z-30'>
         <h1 className='font-bold text-color-brown text-[2rem]'>Products</h1>
 
         <div className=' flex items-center justify-center flex-wrap'> 
