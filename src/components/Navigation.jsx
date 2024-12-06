@@ -52,7 +52,7 @@ const Navbar = () => {
             <SearchBar2 onClickX={()=>setOpenSearchBar(false)} className={`fixed  z-30 ${OpenSearchBar ? 'flex':'hidden'}`}/>
 
             <div className='flex items-center justify-center gap-4 lg:hidden'>
-                <img onClick={()=>setOpenSearchBar(true)} src={searchIcon} width={24} height={24} alt="" className=" w-[32px] h-[32px]" />
+                <img onClick={()=>setOpenSearchBar(true)} src={searchIcon} width={24} height={24} alt="" className=" w-[32px] h-[32px] z-50" />
                 <div className='lg:hidden w-[35px]'>
                     <img onClick={toggle} src={menuIcon} alt="Menu" />
                 </div>
