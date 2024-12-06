@@ -12,6 +12,12 @@
 .text-color-brown{
     color: #201408;
 }
+.text-color-orange{
+    color: #FF7B00;
+}
+.navHover:hover{
+    color: #FF7B00;
+}
 .bg_Primary{
     background-color: #FFF4E9;
 }
@@ -60,3 +66,7 @@
     border: 1px solid #201408;
     transition: 0.5s;
 }
+.HomeHabesha{
+    box-shadow: 3px 3px 8px #20140834;
+}
+

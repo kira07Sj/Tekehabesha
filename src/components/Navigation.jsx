@@ -34,7 +34,7 @@ const Navbar = () => {
             </h1>
             <div className='hidden lg:flex lg:flex-row relative left-1/5 gap-16'>
                 {navLinks.map((items)=>(
-                    <a key={items.id} className="text-color-brown font-bold" href={items.url}>{items.title}</a>
+                    <a key={items.id} className="text-color-brown navHover font-bold" href={items.url}>{items.title}</a>
                 ))}
             </div>
 
