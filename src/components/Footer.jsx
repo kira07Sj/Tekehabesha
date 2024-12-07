@@ -18,7 +18,7 @@ const Footer = () => {
            
         </div>
         <div className='flex items-center justify-center flex-wrap text-[14px] gap-5 pb-5'>
-            <p className='text-white'>©2024 TekeHabesha. All rights reserved.</p>
+            <p className='text-white'>© {new Date().getFullYear()} TekeHabesha. All rights reserved.</p>
             <p className='text-white'>Powerd by @Kasma Digitals</p>
         </div>
    </section>
