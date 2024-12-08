@@ -31,31 +31,7 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className='flex lg:flex-row flex-col  items-center justify-center w-full py-[2rem] gap-6'>
-                        <div className='flex items-center justify-between rounded-lg h-[130px] w-full bg-dark-brown2 shadow-md'>
-                            <div className='w-[120px] max-sm:w-[100px] h-[110px] max-sm:h-[90px] rounded-lg m-2  flex items-center justify-center'>
-                                <img src={Gabi} className='object-contain' />
-                            </div>
-
-                            <div className='flex flex-col items-start justify-center gap-1 w-[70%]'>
-                                <h1 className='text-[16px] max-sm:text-[14px]  text-color-brown font-bold'>A big discount on the new event</h1>
-                                <p className='text-[14px] max-md:text-[13px] max-sm:text-[10px] w-[90%]'>Heritage Threads was founded with a passion for Ethiopian culture and a commitment to sharing it with the world.</p>
-                            </div>
-                            
-                        </div>
-
-                        <div className='flex flex-col items-start justify-center rounded-lg h-[130px] lg:w-[65%] w-full bg-dark-brown2 shadow-md'>
-                            <div className='flex items-center justify-center ml-[2rem]'>
-                                <h1 className='text-[2.4rem] font-bold'>15%</h1>
-                                <p className='font-bold ml-3 mt-3'>Discount</p>
-                            </div>
-                            <p className='w-[90%] text-[13px] ml-[2rem]'>
-                            Don't miss out on these incredible saving. Shop now and 
-                            embrace the elegance of Ethiopian fashion for less!
-                            </p>
-                        </div>
-
-                </div>
+               
         </div>
     </div>
   )
