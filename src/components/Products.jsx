@@ -6,7 +6,9 @@ import Button from './Button'
 const Products = () => {
   return (
     <section id='Product' className='flex flex-col items-center justify-center 
-    w-[70%] max-md:w-[80%] max-sm:w-[80%] py-[1rem] z-30'>
+    w-full  py-[1rem] z-40'>
+      <div className='flex flex-col items-center justify-center 
+    w-[70%] max-md:w-[80%] max-sm:w-[80%] z-40'>
         <h1 className='font-bold text-color-brown text-[2rem]'>Products</h1>
 
         <div className=' flex items-center justify-center flex-wrap'> 
@@ -28,7 +30,8 @@ const Products = () => {
               <p className='text-dark-brown font-semibold'>3</p>
             </div>
             <Button title={'Next'} className={`w-[100px] h-[45px] rounded-lg card_border`}/>
-        </div>     
+        </div>   
+        </div>  
     </section>
   )
 }
