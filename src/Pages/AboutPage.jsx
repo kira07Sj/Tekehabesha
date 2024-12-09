@@ -1,10 +1,11 @@
 import React from 'react'
+import Button from '../components/Button'
 
 const AboutPage = () => {
   return (
     
-    <div id='About' className='flex flex-col items-center justify-center w-[60%] max-sm:w-[80%] py-[2rem]'>
-        <div className='w-full flex flex-col items-center justify-center'>
+    <section  className='flex flex-col items-center justify-center w-full  py-[2rem]'>
+        <div className='w-[60%] max-sm:w-[80%] flex flex-col items-center justify-center mt-[5rem]'>
             <h1 className='font-bold text-color-brown text-[2rem]'>About</h1>
             <p className='text-justify text-color-brown max-sm:text-[14px]'>
                 Welcome to Teka Habesha, your premier destination for authentic
@@ -31,9 +32,9 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-               
+                
         </div>
-    </div>
+    </section>
   )
 }
 

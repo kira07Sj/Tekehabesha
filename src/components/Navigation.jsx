@@ -9,6 +9,8 @@ import Aos from "aos"
 import 'aos/dist/aos.css'
 import { navLinks } from '../constants';
 import SearchBar, {SearchBar2} from './SearchBar';
+import { Link } from 'react-router-dom';
+
 
 
 const Navbar = () => {
@@ -32,9 +34,10 @@ const Navbar = () => {
             <h1 className='font-san sm:text-[20px] text-color-brown font-semibold'>
                 <span className='font-bold'>Teke </span>Habesha
             </h1>
+            
             <div className='hidden lg:flex lg:flex-row relative left-1/5 gap-16'>
                 {navLinks.map((items)=>(
-                    <a key={items.id} className="text-color-brown navHover font-bold" href={items.url}>{items.title}</a>
+                    <Link key={items.id} className="text-color-brown navHover font-bold" to={items.url}>{items.title}</Link>
                 ))}
             </div>
 
