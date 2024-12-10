@@ -2,7 +2,7 @@ import tilet from '../assets/tilet.png'
 import Button from './Button'
 import mainHabesha from '../assets/main-habesha.png'
 import locationIcon from '../assets/location.png'
-
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
 
@@ -32,10 +32,10 @@ const Hero = () => {
                     Elegance
                 </p>
 
-                <div>
+                <Link to='/Product'>
                 <Button title={"Shop Now"} className={`text-white w-[144px] h-[42px]
                  btn-bg-brown mt-6 font-medium rounded-xl`}/>
-                </div>
+                </Link>
                  
             </div>
 
@@ -46,13 +46,14 @@ const Hero = () => {
                 </div>
 
                 <div className=' relative sm:-top-[5.5rem] -top-10 right-[4.3rem]  
-                sm:right-[6rem] -z-10 min-w-[290px] min-h-[220px] max-sm:min-w-[160px] max-sm:min-h-[100px]  flex flex-col
+                sm:right-[6rem] z-10 min-w-[290px] min-h-[220px] max-sm:min-w-[160px] max-sm:min-h-[100px]  flex flex-col
                  HomeHabesha items-center justify-start rounded-md'>
                     <h1 className='text-dark-brown text-[1.6rem] font-bold md:mt-6
                      max-md:text-[1rem] w-[70%]'>A big discount for Chritsmass</h1>
                     <p className='w-[75%] max-md:text-[12px]'>Buy now and get more discounts in the future</p>
-                    <Button title={'Order Now'} className={`btn-bg-orange  rounded-lg font-bold max-sm:scale-75
-                         absolute -right-8 bottom-8 max-sm:bottom-2  p-2 text-[1.2rem] hover:scale-95`}/>
+                    <Link to='/Product'><Button title={'Order Now'} className={`btn-bg-orange  rounded-lg font-bold max-sm:scale-75
+                         absolute -right-8 bottom-8 max-sm:bottom-2  p-2 text-[1.2rem] hover:scale-95 transition-all`}/>
+                    </Link>
                     <div className=' absolute top-0 left-0 w-full h-full bg-dark-brown2  opacity-50 -z-10'/>
                 </div>
             </div>

@@ -52,10 +52,10 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <SearchBar2 onClickX={()=>setOpenSearchBar(false)} className={`fixed  z-30 ${OpenSearchBar ? 'flex':'hidden'}`}/>
+            <SearchBar2 onClickX={()=>setOpenSearchBar(false)} className={`fixed  z-40 ${OpenSearchBar ? 'flex':'hidden'}`}/>
 
             <div className='flex items-center justify-center gap-4 lg:hidden'>
-                <img onClick={()=>setOpenSearchBar(true)} src={searchIcon} width={24} height={24} alt="" className=" w-[32px] h-[32px] z-50" />
+                <img onClick={()=>setOpenSearchBar(true)} src={searchIcon} width={24} height={24} alt="" className=" w-[32px] h-[32px] z-30" />
                 <div className='lg:hidden w-[35px]'>
                     <img onClick={toggle} src={menuIcon} alt="Menu" />
                 </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
                             </div>
                             <div onClick={()=> setOpenNav(false)} className='flex flex-col w-full'>
                                 {navLinks.map((items)=>(
-                                     <a key={items.id} className="navlinks" href={items.url}>{items.title}</a>
+                                     <Link key={items.id} className="navlinks" to={items.url}>{items.title}</Link>
                                 ))}
                             </div>
                             <div className='w-[120px] h-[35px] bg-light-brown lg:hidden flex rounded-3xl justify-center items-center absolute bottom-4 right-7'>
