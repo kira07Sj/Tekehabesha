@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import Gabi from '../assets/image.png'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -21,15 +22,15 @@ const About = () => {
                        Kemis. Each piece is handcrafted by skilled artisans using 
                        traditional techniques passed down</p>
                 <div className='flex flex-row justify-end items-center w-full mt-[1rem] z-10'>
-                    <a href='/About' className='flex items-center justify-center '>
+                    <Link to="/About" className='flex items-center justify-center '>
                     <Button title={"Read More"} className={`text-color-brown w-[184px] max-sm:scale-75 h-[35px]
                     btn-bg-orange  rounded-3xl mr-3 max-sm:-mr-8`}/>
-                    </a>
+                    </Link>
 
-                    <a href='/Service' className='flex items-center justify-center '>
+                    <Link to="/Service" className='flex items-center justify-center '>
                     <Button title={"Service"} className={`text-white w-[144px] max-sm:scale-75 h-[35px]
                     btn-bg-brown  rounded-3xl`}/>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className='flex lg:flex-row flex-col  items-center justify-center w-full py-[2rem] gap-6'>
