@@ -57,3 +57,11 @@ export const FooterLinks = [
 
     },
 ]
+
+export const ServiceDetails = [
+    {
+        id:'1',
+        img:'',
+        
+    }
+]

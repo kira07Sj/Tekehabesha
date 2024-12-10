@@ -3,6 +3,7 @@ import BillBoardImg from '../assets/discountBg.png'
 import Kemis from '../assets/main-habesha.png'
 import Button from './Button'
 import BillBoradImgRight from '../assets/img1.png'
+import { Link } from 'react-router-dom'
 
 const Billboard = () => {
   return (
@@ -26,30 +27,30 @@ const Billboard = () => {
         absolute flex items-center justify-start max-md:justify-center md:gap-5 md:pl-[1.5rem] overflow-hidden
          max-md:right-0 lg:-ml-[10rem]'>
         
-        <a href='#'>
+        <Link to="/Product">
             <Button title={"Get Products"} className={`text-white w-[144px] max-sm:ml-2 max-sm:scale-[.7] h-[35px]
             btn-bg-brown  rounded-3xl`}/>
-        </a>
+        </Link>
 
-        <a href='#'>
+        <Link to="/Service">
             <Button title={"Service"} className={`text-white w-[144px]  max-sm:scale-[.7] h-[35px] max-sm:-ml-4 max-md:ml-[2rem]
             btn-bg-brown  rounded-3xl`}/>
-        </a>
+        </Link>
 
         </div>
 
         <div className=' items-center justify-center hidden xl:flex'>
                 <div className='bg_Primary w-[255px] h-[380px] absolute left-[50%] -rotate-[30deg] ml-[4rem]'/>
                 <div className='w-[260px] h-[220px] absolute left-[70%] -mt-2'>
-                    <img src={BillBoradImgRight} alt="" className='object-cover z-30' />
+                    <img src={BillBoradImgRight} alt="" className='object-cover z-30 ' />
                 </div>
                 <p className='text-white text-[16px] absolute z-20 w-[13%] h-[210px] right-5 mt-[3rem]'>Don't miss out on these incredible saving.
                      Shop now and embrace the elegance of Ethiopian 
                      fashion for less!
                 </p>
-                <a href='#' className=' absolute right-0 mt-[6rem]'>
+                <Link to="/Service" className=' absolute right-0 mt-[6rem] z-20'>
                     <Button title={"More service"} className={`text-dark-brown w-[144px]  h-[35px] bg_Primary  rounded-[40px] rounded-r-none`}/>
-                </a>
+                </Link>
         </div>
     </div>
   )
