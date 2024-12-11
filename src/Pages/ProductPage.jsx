@@ -2,9 +2,34 @@ import React from 'react'
 import Card from '../components/Card'
 import { ProductInfo } from '../constants'
 import Button from '../components/Button'
+import { useState, useEffect } from 'react'
+import {getProducts} from '../Services/api'
 
 
 const ProductPage = () => {
+
+  
+  const [products,SetProducts] = useState([])
+  const [isLoading, SetIsLoading] = useState(true)
+
+  useEffect(()=>{
+    const fetchProducts = async () => {
+      try {
+        const data = await getProducts()
+        SetProducts(data)
+      } catch (error) {
+        console.error("Error fetching products", error)
+      }
+      finally{
+        SetIsLoading(false)
+      }
+    }
+
+    fetchProducts()
+  }, [])
+
+  if (isLoading) return <div>Loading Products...</div>
+
   return (
     <section  className='flex flex-col items-center justify-center 
     w-full  py-[1rem] z-40 '>
@@ -12,11 +37,15 @@ const ProductPage = () => {
     w-[70%] max-md:w-[80%] max-sm:w-[80%] z-40 mt-[5rem]'>
         <h1 className='font-bold text-color-brown text-[2rem]'>Products</h1>
 
-        <div className=' flex items-center justify-center flex-wrap'> 
-            {ProductInfo.map((items)=>(
-              <Card key={items.id} title={items.title} Price={items.price} imgUrl={items.imageUrl}/>
+        {products.length > 0 ? (
+          <div className=' flex items-center justify-center flex-wrap'> 
+            {products.map((items)=>(
+              <Card key={items.id} title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/api${items.Image}`}/>
             ))}
-        </div>   
+          </div>
+        ) : (<div className=' flex items-center justify-center flex-wrap'> 
+            <P>No Products Found</P>
+          </div>)}   
 
         <div className='w-full flex flex-row gap-3 items-center justify-center my-4'>
             <Button title={'Previous'} className={`w-[100px] h-[45px] rounded-lg card_border`}/>
