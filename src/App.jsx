@@ -7,6 +7,7 @@ import Footer from "./components/Footer.jsx"
 import AboutPage from './Pages/AboutPage.jsx'
 import ProductsPage from './Pages/ProductPage.jsx'
 import ServicePage from "./Pages/ServicePage.jsx"
+import ProductDetailPage from "./Pages/ProductDetailPage.jsx"
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -34,6 +35,8 @@ function App() {
           <Route path="/About" element={<AboutPage/>}/>
           <Route path="/Product" element={<ProductsPage/>}/>
           <Route path="/Service" element={<ServicePage/>}/>
+          <Route path="/ProductDetail" element={<ProductDetailPage/>}/>
+          
           
           
     </Routes>

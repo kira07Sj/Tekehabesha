@@ -40,7 +40,7 @@ const ProductPage = () => {
         {products.length > 0 ? (
           <div className=' flex items-center justify-center flex-wrap'> 
             {products.map((items)=>(
-              <Card key={items.id} title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/api${items.Image}`}/>
+              <Card key={items.id} title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/${items.Image}`}/>
             ))}
           </div>
         ) : (<div className=' flex items-center justify-center flex-wrap'> 
