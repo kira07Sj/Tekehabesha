@@ -1,11 +1,16 @@
 import React from 'react'
 import Button from '../components/Button'
 import AboutBg from '../assets/discountBg.png'
+import tilet from '../assets/tilet.png'
 
 const AboutPage = () => {
   return (
     
     <section  className='flex flex-col items-center justify-center w-full  py-[2rem]'>
+      <div className=' absolute top-0 right-10 max-md:right-3 -z-10'>
+            <img src={tilet} alt="bg" 
+            className=' h-[700px]  object-contain scale-110  lg:scale-150' />
+        </div>
         <div className='w-[60%] max-sm:w-[80%] flex flex-col items-center justify-center mt-[5rem]'>
             <h1 className='font-bold text-color-brown text-[2rem]'>About</h1>
               <div className='overflow-hidden rounded-lg my-5 '>

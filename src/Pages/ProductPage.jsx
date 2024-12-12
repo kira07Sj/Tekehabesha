@@ -4,6 +4,7 @@ import { ProductInfo } from '../constants'
 import Button from '../components/Button'
 import { useState, useEffect } from 'react'
 import {getProducts} from '../Services/api'
+import tilet from '../assets/tilet.png'
 
 
 const ProductPage = () => {
@@ -33,6 +34,10 @@ const ProductPage = () => {
   return (
     <section  className='flex flex-col items-center justify-center 
     w-full  py-[1rem] z-40 '>
+      <div className=' absolute top-0 right-10 max-md:right-3 -z-10'>
+            <img src={tilet} alt="bg" 
+            className=' h-[700px]  object-contain scale-110  lg:scale-150' />
+        </div>
       <div className='flex flex-col items-center justify-center 
     w-[70%] max-md:w-[80%] max-sm:w-[80%] z-40 mt-[5rem]'>
         <h1 className='font-bold text-color-brown text-[2rem]'>Products</h1>
