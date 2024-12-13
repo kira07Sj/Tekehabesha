@@ -5,6 +5,7 @@ import Button from '../components/Button'
 import { useState, useEffect } from 'react'
 import {getProducts} from '../Services/api'
 import tilet from '../assets/tilet.png'
+import { Link } from 'react-router-dom'
 
 
 const ProductPage = () => {
@@ -45,7 +46,9 @@ const ProductPage = () => {
         {products.length > 0 ? (
           <div className=' flex items-center justify-center flex-wrap'> 
             {products.map((items)=>(
-              <Card key={items.id} title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/${items.Image}`}/>
+              <Link key={items.id} to={`/ProductDetail/${items.id}`}>
+                <Card  title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/${items.Image}`}/>
+              </Link>
             ))}
           </div>
         ) : (<div className=' flex items-center justify-center flex-wrap'> 
