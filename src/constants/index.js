@@ -65,3 +65,10 @@ export const ServiceDetails = [
         
     }
 ]
+
+export const DashboardNavs = [
+    {id:'1', name:"Overview"},
+    {id:'2', name:"Management"},
+    {id:'3', name:"Notification"},
+    
+]

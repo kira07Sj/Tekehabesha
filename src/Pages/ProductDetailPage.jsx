@@ -29,7 +29,7 @@ const ProductDetailPage = () => {
     }, [id]);
   
     if (isLoading) {
-      return <div>Loading...</div>;
+      return <div className='z-50'>Loading...</div>;
     }
   
     if (!product) {
