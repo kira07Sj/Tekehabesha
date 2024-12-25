@@ -6,6 +6,9 @@ import ProductDetailPage from "./Pages/ProductDetailPage.jsx"
 import Home from './Pages/Home.jsx'
 import MainPage from './layouts/MainPage.jsx'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdminPage from './layouts/AdminPage.jsx'
+import Dashboard from './Pages/Overview.jsx'
+import Management from "./Pages/Management.jsx"
 
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
 
         </Route>
 
+        <Route path='/Admin/Dashboard' element = {<AdminPage/>}>
+          <Route index element={<Management/>}/>
+        </Route>
 
         
       </Routes>

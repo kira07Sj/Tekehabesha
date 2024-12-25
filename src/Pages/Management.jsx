@@ -2,8 +2,8 @@ import React from 'react'
 
 const Management = ({className}) => {
   return (
-    <div className={`${className} w-[90%] h-full  top-0 left-0
-            flex items-center justify-start flex-col `}>
+    <div className={`${className} w-[85%] h-full  
+            flex items-center justify-start flex-col right-2 absolute `}>
                <div className='w-full h-[80px] flex items-center justify-between px-5 pr-10'>
                     <div className='flex items-center justify-center p-5'>
                         <div className='w-5 h-5 bg-black'></div>
