@@ -29,8 +29,11 @@ function App() {
 
         </Route>
 
-        <Route path='/Admin/Dashboard' element = {<AdminPage/>}>
-          <Route index element={<Management/>}/>
+        <Route path='/Admin' element = {<AdminPage/>}>
+          <Route path='Dashboard' element={<Dashboard/>}/>
+          <Route path='Manage-Products' element={<Management/>}/>
+          
+          
         </Route>
 
         
