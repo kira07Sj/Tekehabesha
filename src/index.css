@@ -30,6 +30,9 @@
 .bg-dark-brown2{
     background-color: #2014081a;
 }
+.bg-fade-orange{
+    background-color: #ffe1c5;
+}
 .btn-bg-brown{
     background-image: url("./assets/Rectangle54.png");
     background-position: center;

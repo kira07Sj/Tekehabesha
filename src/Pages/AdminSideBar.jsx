@@ -1,6 +1,7 @@
     import React,{useState} from 'react'
     import { DashboardNavs } from '../constants';
     import { Link } from 'react-router-dom';
+    import tilet from '../assets/tilet.png'
     
     const AdminSideBar
      = () => {
@@ -16,10 +17,14 @@
       return (
         <section className=' '>
            
-
+           <div className=' fixed top-0 right-10 max-md:right-3 -z-20'>
+                            <img src={tilet} alt="bg" 
+                            className=' h-[700px]  object-contain scale-110  lg:scale-150' />
+                    </div>
             <div className='w-[200px] h-[100dvh] fixed z-50 top-0 left-0 lg:flex
             sidebar hidden items-center justify-start flex-col overflow-hidden'>
                 <h1 className='font-bold text-dark-brown mt-[2rem]'>Teke <span className='font-semibold'>Habesha</span></h1>
+                
                 
                 <div className=' w-full flex flex-col items-center justify-center mt-[1rem]'>
                     {DashboardNavs.map((items)=>(
@@ -35,9 +40,11 @@
 
             <div className='w-[100%]  z-50 top-0 left-0 lg:hidden
             sidebar flex items-center justify-start flex-col overflow-hidden'>
+                
                 <h1 className='font-bold text-dark-brown mt-[2rem]'>Teke <span className='font-semibold'>Habesha</span></h1>
                 
                 <div className=' w-full  flex flex-rowitems-center justify-center mt-[1rem]'>
+                    
                     {DashboardNavs.map((items)=>(
                         <Link to={items.URL} onClick={()=>Toggle(items.id)}  key={items.id} className='w-full h-[40px] flex flex-row items-center gap-4 max-sm:gap-2 cursor-default'>
                             <div className={`${ActiveId == items.id ? ' flex':'hidden'} h-[40px] w-[200px] max-sm:w-[120px] -z-10  rounded-t-md bg-orange-600/30 absolute `}/>
