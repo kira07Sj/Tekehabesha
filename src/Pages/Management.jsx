@@ -1,6 +1,4 @@
 import React,{useState} from 'react'
-import Button from '../components/Button';
-import axios from 'axios';
 import {postProducts} from '../Services/api'
 
 

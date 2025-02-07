@@ -2,16 +2,19 @@ import React from 'react'
 import Card from '../components/Card'
 import Button from '../components/Button'
 import { useState, useEffect } from 'react'
-import {getProducts} from '../Services/api'
+import {getProducts, deleteProduct} from '../Services/api'
 import tilet from '../assets/tilet.png'
 import Loading from '../components/Loading'
 import { Link } from 'react-router-dom'
+import deleteIcon from '/assets/Icons/delete.png'
+import Notification from '../components/Notification'
 
 
 const Dashboard = ({className}) => {
 
   const [products,SetProducts] = useState([])
   const [isLoading, SetIsLoading] = useState(true)
+  const [warning, SetWarning] = useState(false)
 
   useEffect(()=>{
     const fetchProducts = async () => {
@@ -40,11 +43,17 @@ const Dashboard = ({className}) => {
                        className=' h-[700px]  object-contain scale-110  lg:scale-150' />
             </div>
             <h1 className='font-bold text-color-brown text-[2rem]'>Admin Dashboard</h1>
+
+            <Notification/>
             
             {products.length > 0 ? (
           <div className=' flex items-center justify-center flex-wrap'> 
             {products.map((items)=>(
               <Link key={items.id} >
+                <button  onClick={()=>deleteProduct(items.id)} className='bg-white rounded-full h-[35px] w-[35px] overflow-hidden flex items-center justify-center
+                 absolute mt-[2rem] ml-[2rem] z-30'>
+                  <img src={deleteIcon} alt="delete" className='w-[60%]'/>
+                  </button>
                 <Card  title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/${items.Image}`}/>
               </Link>
             ))}

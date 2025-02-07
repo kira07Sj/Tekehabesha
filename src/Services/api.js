@@ -28,3 +28,13 @@ export const postProducts = async (formData) => {
         }
     }
 };
+
+export const deleteProduct = async (ProductId) => {
+    try {
+       await axios.delete('http://localhost:8000/product-details/' + ProductId + '/')
+       alert("Product Deleted!")
+    } catch (error) {
+        console.error("Error deleting the product:", error);
+        alert("Failed to delete product");
+    }
+}
