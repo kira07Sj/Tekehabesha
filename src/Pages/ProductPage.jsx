@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import {getProducts} from '../Services/api'
 import tilet from '../assets/tilet.png'
 import { Link } from 'react-router-dom'
-
+import Loading from '../components/Loading';
 
 const ProductPage = () => {
 
@@ -30,7 +30,7 @@ const ProductPage = () => {
     fetchProducts()
   }, [])
 
-  if (isLoading) return <div className='z-50'>Loading Products...</div>
+  if (isLoading) return <Loading/>
 
   return (
     <section  className='flex flex-col items-center justify-center 

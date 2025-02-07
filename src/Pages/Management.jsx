@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
-import Loading from '../components/Loading';
+import Button from '../components/Button';
+
+
 
 const Management = ({className}) => {
     const[ImagePreview, SetImagePreview] = useState(null)
@@ -10,6 +12,8 @@ const Management = ({className}) => {
           SetImagePreview(imageUrl);
         }
       };
+
+      const [IsTagInputOpen, SetIsTagInputOpen] = useState(false)
   return (
     <div className={`${className} w-[85%] h-full  
             flex items-center justify-start flex-col right-2 lg:absolute pb-5`}>
@@ -77,9 +81,17 @@ const Management = ({className}) => {
 
                         </div>
 
-                        <div className='w-[480px] h-[120px] border-2 border-amber-950/5 rounded-md shadow-md max-lg:w-[100%] backdrop-blur-[3px] flex items-start justify-center flex-col px-5 gap-5'>
-
-                        </div>
+                        <div className='w-[480px] h-[120px] border-2 border-amber-950/5 rounded-md shadow-md max-lg:w-[100%] 
+                        backdrop-blur-[3px] flex items-center justify-start ScrollHidden'>
+                            <div className='w-full h-full overflow-x-scroll flex items-center justify-start p-3'>
+                                <Button onClick={()=>{SetIsTagInputOpen(true)}} className={`btn-bg-brown px-3 py-1 rounded-md text-white`} title={`Add Tag`}/>
+                            </div>
+                            
+                            <div className={`w-full h-full bg-light-brown z-20 absolute items-center justify-center ${IsTagInputOpen ? 'flex':'hidden'}`}>
+                                <input type="text" className='h-[34px] rounded-md mr-3 outline-none'/>
+                                <Button onClick={()=>{SetIsTagInputOpen(false)}} className={`btn-bg-brown px-3 py-1 rounded-md text-white`} title={`Add Tag`}/>
+                                </div>
+                            </div>
 
                     </div>
             </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import kemis from '/assets/products/1.jpg';
 import tilet from '../assets/tilet.png';
 import { useParams } from 'react-router-dom';
+import Loading from '../components/Loading';
 
 const ProductDetailPage = () => {
     const { id } = useParams();
@@ -29,7 +30,7 @@ const ProductDetailPage = () => {
     }, [id]);
   
     if (isLoading) {
-      return <div className='z-50'>Loading...</div>;
+      return <Loading/>;
     }
   
     if (!product) {
@@ -37,7 +38,7 @@ const ProductDetailPage = () => {
     }
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
+    <div className="w-full  flex flex-col items-center justify-center">
       <div className="absolute top-0 right-10 max-md:right-3 -z-10">
         <img
           src={tilet}
@@ -45,6 +46,7 @@ const ProductDetailPage = () => {
           className="h-[700px] object-contain scale-110 lg:scale-150"
         />
       </div>
+      {isLoading && <Loading/>}
       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-5 mt-[6rem] max-md:mt-[2rem]">
         <div className="w-[400px] h-[500px] rounded-lg overflow-hidden max-md:scale-[0.8] bg-dark-brown shadow-xl">
           <img src={`http://localhost:8000/${product.Image}`} className='object-contain' alt={product.title} /> {/* Product image */}

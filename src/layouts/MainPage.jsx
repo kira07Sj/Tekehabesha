@@ -4,11 +4,11 @@ import { Outlet } from "react-router-dom"
 
 const MainPage = () => {
     return (
-        <>
+        <body className="h-[100vh]">
             <Navigation />
             <Outlet />
             <Footer />
-        </>
+        </body>
     )
 }
 

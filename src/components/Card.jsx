@@ -15,7 +15,7 @@ const Card = ({title, Price, imgUrl}) => {
             <h1 className='text-white  text-[20px] font-bold pl-3'>{title}</h1>
             <div className='flex flex-row items-center justify-between px-3 w-full'>
               <p className='text-white'>More Details</p>
-              <p className='font-bold text-white'>{Price}</p>
+              <p className='font-bold text-white'>{Price} birr</p>
 
             </div>
         </div>

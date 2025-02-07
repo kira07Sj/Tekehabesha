@@ -7,8 +7,6 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-
-
 .text-color-brown{
     color: #201408;
 }
@@ -87,4 +85,9 @@
         opacity: 1;
         transform: translateX(0); 
     }
+}
+
+.ScrollHidden{
+    scrollbar-width: thin thin;
+    scrollbar-color: transparent transparent;
 }
