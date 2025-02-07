@@ -10,3 +10,21 @@ export const getProducts = async () => {
         throw error
     }
 }
+
+export const postProducts = async (formData) => {
+    try {
+        const res = await axios.post('http://127.0.0.1:8000/products/', formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+        });
+        console.log("Product created:", res.data);
+        alert("Product successfully added!");
+    } catch (error) {
+        if (error.response) {
+            console.error("Response Data:", error.response.data); // Debug response error
+            alert("Error: " + JSON.stringify(error.response.data)); // Show specific error
+        } else {
+            console.error("Error:", error.message);
+            alert("Failed to add product");
+        }
+    }
+};
