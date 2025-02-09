@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {postProducts} from '../Services/api'
+import Notification from '../components/Notification';
 
 
 
@@ -11,6 +12,7 @@ const Management = ({className}) => {
     const [tags, setTags] = useState(""); // Store as a string
     const [image, setImage] = useState(null); // Store the file
     const [imagePreview, setImagePreview] = useState(null); // Store preview URL
+    const [success, Setsuccess] = useState(false)
     
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -48,6 +50,15 @@ const Management = ({className}) => {
     <div className={`${className} w-[85%] h-full  
             flex items-center justify-start flex-col right-2 lg:absolute pb-5`}>
 
+                <div className={`${success ? 'flex':'hidden'} w-full h-[100dvh] top-0 fixed z-40 backdrop-blur-sm flex 
+                    items-center justify-center`}>
+                    <Notification
+                        success={`flex`}
+                        warning={`hidden`}
+                        noBtnOnClick={()=>Setsuccess(false)}
+                    />
+                </div>
+
                
                 <form onSubmit={handleSubmit} className='w-full h-full'>
                <div className='w-full max-lg:w-[120%] h-[80px] flex items-center justify-between px-5 pr-10 ml-10 '>
@@ -56,7 +67,7 @@ const Management = ({className}) => {
                         <h1 className='ml-4 max-md:text-[13px]'>Add new Product</h1>
                     </div>
 
-                    <button type='submit' className='flex items-center justify-center bg-dark-brown rounded-lg p-1 px-9'>
+                    <button type='submit' onClick={()=>Setsuccess(true)} className='flex items-center justify-center bg-dark-brown rounded-lg p-1 px-9'>
                         <h1 className='text-white max-md:text-[12px]'>Save</h1>
                     </button>
                 </div>

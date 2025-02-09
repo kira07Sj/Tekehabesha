@@ -16,9 +16,12 @@ const Dashboard = ({className}) => {
   const [isLoading, SetIsLoading] = useState(true)
   const [warning, SetWarning] = useState(false)
 
-  useEffect(()=>{
-    const fetchProducts = async () => {
-      try {
+  useEffect(() => {
+    fetchProducts();
+}, []);
+
+const fetchProducts = async () => {
+try {
         const data = await getProducts()
         SetProducts(data)
       } catch (error) {
@@ -27,12 +30,17 @@ const Dashboard = ({className}) => {
       finally{
         SetIsLoading(false)
       }
-    }
+};
 
-    fetchProducts()
-  }, [])
+const handleDelete = async (productId) => {
+    await deleteProduct(productId);
+    SetProducts(products.filter(product => product.id !== productId)); // Remove deleted product from state
+};
 
-  if (isLoading) return <Loading/>
+
+  if (isLoading) return <Loading className={`left-1/2 top-1/2`}/>
+
+ 
 
   return (
     
@@ -44,22 +52,36 @@ const Dashboard = ({className}) => {
             </div>
             <h1 className='font-bold text-color-brown text-[2rem]'>Admin Dashboard</h1>
 
-            <Notification/>
+
             
             {products.length > 0 ? (
           <div className=' flex items-center justify-center flex-wrap'> 
             {products.map((items)=>(
+              <>
+                <div className={`${warning ? 'flex':'hidden'} w-[100dvw] h-[100dvh] top-0 left-[10rem] fixed z-40 backdrop-blur-sm flex 
+                items-center justify-center`}>
+                <Notification
+                  success={`hidden`}
+                  warning={`flex`}
+                  yesBtnOnClick={()=>{
+                    handleDelete(items.id)
+                    SetWarning(false)
+                  }}
+                  noBtnOnClick={()=>SetWarning(false)}
+              />
+              </div>
               <Link key={items.id} >
-                <button  onClick={()=>deleteProduct(items.id)} className='bg-white rounded-full h-[35px] w-[35px] overflow-hidden flex items-center justify-center
+                <button  onClick={()=>SetWarning(true)} className='bg-white rounded-full h-[35px] w-[35px] overflow-hidden flex items-center justify-center
                  absolute mt-[2rem] ml-[2rem] z-30'>
                   <img src={deleteIcon} alt="delete" className='w-[60%]'/>
                   </button>
                 <Card  title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/${items.Image}`}/>
               </Link>
+              </>
             ))}
           </div>
         ) : (<div className=' flex items-center justify-center flex-wrap'> 
-            <P>No Products Found</P>
+            No Products Found
           </div>)}
                 
     </div>

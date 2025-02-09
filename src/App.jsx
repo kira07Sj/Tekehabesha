@@ -9,14 +9,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminPage from './layouts/AdminPage.jsx'
 import Dashboard from './Pages/Overview.jsx'
 import Management from "./Pages/Management.jsx"
+import Login from './Pages/Login.jsx'
+import { AuthProvider } from './auth/AuthContext.jsx'
+import ProtectedRoute from './auth/ProtectedRoute.jsx'
 
 
 function App() {
 
   return (
+
+    <AuthProvider>
     <Router>
-
-
 
       <Routes>
         <Route path='/' element={<MainPage />} >
@@ -28,22 +31,17 @@ function App() {
           <Route path="/ProductDetail/:id" element={<ProductDetailPage />} />
 
         </Route>
-
-        <Route path='/Admin' element = {<AdminPage/>}>
+        <Route path='login' element={<Login/>}/>
+        <Route path='/Admin' element = {<ProtectedRoute><AdminPage/></ProtectedRoute>}>
           <Route path='Dashboard' element={<Dashboard/>}/>
           <Route path='Manage-Products' element={<Management/>}/>
-          
-          
         </Route>
 
         
       </Routes>
 
-
-
-
-
     </Router>
+    </AuthProvider>
   )
 }
 

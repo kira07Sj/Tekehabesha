@@ -1,11 +1,12 @@
-    import React,{useState} from 'react'
+    import React,{useState, useContext} from 'react'
+    import { AuthContext } from '../auth/AuthContext';
     import { DashboardNavs } from '../constants';
     import { Link } from 'react-router-dom';
     import tilet from '../assets/tilet.png'
     
-    const AdminSideBar
-     = () => {
+    const AdminSideBar = () => {
         const [ActiveId, SetActiveId] = useState('1')
+        const { logout } = useContext(AuthContext);
         
 
         const Toggle = (ItemsId)=>{
@@ -36,12 +37,18 @@
                     ))}
                     
                 </div>
+                <button onClick={logout} className='btn-bg-brown text-white rounded-md px-5 py-1
+                    absolute z-40 bottom-3'>Logout</button>
             </div>
 
             <div className='w-[100%]  z-50 top-0 left-0 lg:hidden
             sidebar flex items-center justify-start flex-col overflow-hidden'>
+                <div className='flex items-center justify-between px-3 w-[90%]  mt-[2rem]'>
+                    <h1 className='font-bold text-dark-brown '>Teke <span className='font-semibold'>Habesha</span></h1>
+                    <button onClick={logout} className='btn-bg-brown text-white rounded-md px-5 py-1 max-md:text-[12px]
+                    '>Logout</button>                    
+                </div>
                 
-                <h1 className='font-bold text-dark-brown mt-[2rem]'>Teke <span className='font-semibold'>Habesha</span></h1>
                 
                 <div className=' w-full  flex flex-rowitems-center justify-center mt-[1rem]'>
                     

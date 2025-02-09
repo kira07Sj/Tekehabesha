@@ -43,7 +43,7 @@ const Products = () => {
             ))}
           </div>
         ) : (<div className=' flex items-center justify-center flex-wrap'> 
-            <P>No Products Found</P>
+           No Product is Added
           </div>)}  
 
         <div className='w-full flex flex-row gap-3 items-center justify-center my-4'>
