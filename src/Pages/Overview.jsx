@@ -63,6 +63,7 @@ const handleDelete = async (productId) => {
                 <Notification
                   success={`hidden`}
                   warning={`flex`}
+                  warning2={`hidden`}
                   yesBtnOnClick={()=>{
                     handleDelete(items.id)
                     SetWarning(false)
@@ -71,8 +72,9 @@ const handleDelete = async (productId) => {
               />
               </div>
               <Link key={items.id} >
-                <button  onClick={()=>SetWarning(true)} className='bg-white rounded-full h-[35px] w-[35px] overflow-hidden flex items-center justify-center
+                <button  onClick={()=>handleDelete(items.id)} className='bg-white rounded-full h-[35px] w-[35px] overflow-hidden flex items-center justify-center
                  absolute mt-[2rem] ml-[2rem] z-30'>
+                  
                   <img src={deleteIcon} alt="delete" className='w-[60%]'/>
                   </button>
                 <Card  title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/${items.Image}`}/>

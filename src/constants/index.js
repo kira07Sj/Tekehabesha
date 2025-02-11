@@ -69,6 +69,5 @@ export const ServiceDetails = [
 export const DashboardNavs = [
     {id:'1', name:"Dashboard", URL:'Dashboard'},
     {id:'2', name:"Management", URL:'Manage-Products'},
-    {id:'3', name:"Notification", URL:'Notification'},
     
 ]

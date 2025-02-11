@@ -8,7 +8,7 @@ const Management = ({className}) => {
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [price, setPrice] = useState(0);
+    const [price, setPrice] = useState();
     const [tags, setTags] = useState(""); // Store as a string
     const [image, setImage] = useState(null); // Store the file
     const [imagePreview, setImagePreview] = useState(null); // Store preview URL
@@ -55,6 +55,7 @@ const Management = ({className}) => {
                     <Notification
                         success={`flex`}
                         warning={`hidden`}
+                        warning2={`hidden`}
                         noBtnOnClick={()=>Setsuccess(false)}
                     />
                 </div>
