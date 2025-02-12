@@ -31,10 +31,10 @@ function App() {
           <Route path="/ProductDetail/:id" element={<ProductDetailPage />} />
 
         </Route>
-        <Route path='login' element={<Login/>}/>
+        <Route path='/login' element={<Login/>}/>
         <Route path='/Admin' element = {<ProtectedRoute><AdminPage/></ProtectedRoute>}>
-          <Route path='Dashboard' element={<Dashboard/>}/>
-          <Route path='Manage-Products' element={<Management/>}/>
+          <Route path='/Dashboard' element={<Dashboard/>}/>
+          <Route path='/Manage-Products' element={<Management/>}/>
         </Route>
 
         
