@@ -41,6 +41,9 @@
     background-position: center;
     background-size: cover;
 }
+.btn-bg-gradient{
+    background: linear-gradient(to right,#C9895A , #612709 );
+}
 .orange__gradient {
     background: linear-gradient(90deg, #d47923 0%, #FF7B00 100%);
     filter: blur(110px);
@@ -92,3 +95,6 @@
     scrollbar-color: transparent transparent;
 }
 
+.border{
+    border: 2px solid #201408bb;
+}
