@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://127.0.0.1:8000/login/", { username, password });
+            const res = await axios.post("https://tekehabesha-backend.onrender.com/login/", { username, password });
             login(res.data.access); // Store token
             navigate("/admin/dashboard"); // Redirect after login
         } catch (error) {

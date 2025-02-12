@@ -77,7 +77,7 @@ const handleDelete = async (productId) => {
                   
                   <img src={deleteIcon} alt="delete" className='w-[60%]'/>
                   </button>
-                <Card  title={items.title} Price={items.price} imgUrl={`http://127.0.0.1:8000/${items.Image}`}/>
+                <Card  title={items.title} Price={items.price} imgUrl={`https://tekehabesha-backend.onrender.com/${items.Image}`}/>
               </Link>
               </>
             ))}
