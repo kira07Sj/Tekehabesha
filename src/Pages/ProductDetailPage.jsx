@@ -49,7 +49,7 @@ const ProductDetailPage = () => {
       {isLoading && <Loading/>}
       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-5 mt-[6rem] max-md:mt-[2rem]">
         <div className="w-[400px] h-[500px] rounded-lg overflow-hidden max-md:scale-[0.8] bg-dark-brown shadow-xl">
-          <img src={`https://tekehabesha-backend.onrender.com/${product.Image}`} className='object-contain' alt={product.title} /> {/* Product image */}
+          <img src={`https://tekehabesha-backend.onrender.com${product.Image}`} className='object-contain' alt={product.title} /> {/* Product image */}
         </div>
         <div className="flex flex-col items-start h-full justify-center w-[500px] max-sm:w-[80%] md:ml-[2rem]">
           <h1 className="text-dark-brown text-[1.5rem] md:text-[2.3rem] font-bold my-3">

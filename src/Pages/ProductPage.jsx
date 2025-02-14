@@ -47,7 +47,7 @@ const ProductPage = () => {
           <div className=' flex items-center justify-center flex-wrap'> 
             {products.map((items)=>(
               <Link key={items.id} to={`/ProductDetail/${items.id}`}>
-                <Card  title={items.title} Price={items.price} imgUrl={`https://tekehabesha-backend.onrender.com/${items.Image}`}/>
+                <Card  title={items.title} Price={items.price} imgUrl={`https://tekehabesha-backend.onrender.com${items.Image}`}/>
               </Link>
             ))}
           </div>
