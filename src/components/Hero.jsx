@@ -36,7 +36,7 @@ const Hero = () => {
                 <Button title={"Shop Now"} className={`text-white w-[144px] h-[42px]
                  btn-bg-brown mt-6 font-medium rounded-xl`}/>
                 </Link>
-                <Link to="/login">log</Link>
+                
                  
             </div>
 

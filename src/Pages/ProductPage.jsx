@@ -30,7 +30,8 @@ const ProductPage = () => {
     fetchProducts()
   }, [])
 
-  if (isLoading) return <Loading/>
+  if (isLoading) return <div className='w-[100dvw] h-[100dvh] fixed top-0 left-0 z-[100] flex items-center justify-center
+   bg_Primary'><Loading/></div>
 
   return (
     <section  className='flex flex-col items-center justify-center 

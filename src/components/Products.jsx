@@ -3,6 +3,7 @@ import Card from './Card'
 import Button from './Button'
 import { Link } from 'react-router-dom'
 import {getProducts} from '../Services/api'
+import Loading from './Loading'
 
 const Products = () => {
 
@@ -25,7 +26,8 @@ const Products = () => {
       fetchProducts()
     }, [])
   
-    if (isLoading) return <div>Loading Products...</div>
+    if (isLoading) return <div className='w-[100dvw] h-[100dvh] fixed top-0 left-0 z-[100] flex items-center justify-center
+    bg_Primary'><Loading/></div>
   
   return (
     <section id='Product' className='flex flex-col items-center justify-center 

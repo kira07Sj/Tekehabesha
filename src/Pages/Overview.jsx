@@ -46,10 +46,7 @@ const handleDelete = async (productId) => {
     
     <div className={`${className} w-[85%] h-full  
             flex items-start justify-start flex-col right-1 lg:absolute pb-5 max-md:items-center max-md:justify-start max-md:absolute max-md:right-7`}>
-           <div className=' absolute top-0 right-10 max-md:right-3 -z-10 '>
-                       <img src={tilet} alt="bg" 
-                       className=' h-[700px]  object-contain scale-110  lg:scale-150' />
-            </div>
+           
             <h1 className='font-bold text-color-brown text-[2rem]'>Admin Dashboard</h1>
 
 
