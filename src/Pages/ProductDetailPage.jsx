@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import kemis from '/assets/products/1.jpg';
 import tilet from '../assets/tilet.png';
 import { useParams } from 'react-router-dom';
-import Loading from '../components/Loading';
 
 const ProductDetailPage = () => {
     const { id } = useParams();
@@ -30,8 +28,7 @@ const ProductDetailPage = () => {
     }, [id]);
   
     if (isLoading) {
-      return <div className='w-[100dvw] h-[100dvh] fixed top-0 left-0 z-[100] flex items-center justify-center
-      bg_Primary'><Loading/></div>
+      return <div >Loading</div>
     }
   
     if (!product) {
